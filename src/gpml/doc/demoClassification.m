@@ -14,17 +14,21 @@ disp('m1 = [0.75; 0]; m2 = [-0.75; 0];                            % the two mean
 m1 = [0.75; 0]; m2 = [-0.75; 0];
 disp(' ')
 
+disp('                               % generate training data for the first class')
 disp('x1 = bsxfun(@plus, chol(S1)''*gpml_randn(0.2, 2, n1), m1);')
 x1 = bsxfun(@plus, chol(S1)'*gpml_randn(0.2, 2, n1), m1);
+disp('                              % generate training data for the second class')
 disp('x2 = bsxfun(@plus, chol(S2)''*gpml_randn(0.3, 2, n2), m2);')         
-x2 = bsxfun(@plus, chol(S2)'*gpml_randn(0.3, 2, n2), m2);         
+x2 = bsxfun(@plus, chol(S2)'*gpml_randn(0.3, 2, n2), m2);
 disp(' ')
 
 disp('x = [x1 x2]''; y = [-ones(1,n1) ones(1,n2)]'';')
 x = [x1 x2]'; y = [-ones(1,n1) ones(1,n2)]';
 figure(6)
+disp('                                      % plot the samples of the first class')
 disp('plot(x1(1,:), x1(2,:), ''b+''); hold on;');
 plot(x1(1,:), x1(2,:), 'b+', 'MarkerSize', 12); hold on
+disp('                                     % plot the samples of the second class')
 disp('plot(x2(1,:), x2(2,:), ''r+'');');
 plot(x2(1,:), x2(2,:), 'r+', 'MarkerSize', 12);
 disp(' ')
