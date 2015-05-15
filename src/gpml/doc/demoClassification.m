@@ -14,8 +14,10 @@ disp('m1 = [0.75; 0]; m2 = [-0.75; 0];                            % the two mean
 m1 = [0.75; 0]; m2 = [-0.75; 0];
 disp(' ')
 
+disp('                            % generate the sample points of the first class')
 disp('x1 = bsxfun(@plus, chol(S1)''*gpml_randn(0.2, 2, n1), m1);')
 x1 = bsxfun(@plus, chol(S1)'*gpml_randn(0.2, 2, n1), m1);
+disp('                           % generate the sample points of the second class')
 disp('x2 = bsxfun(@plus, chol(S2)''*gpml_randn(0.3, 2, n2), m2);')         
 x2 = bsxfun(@plus, chol(S2)'*gpml_randn(0.3, 2, n2), m2);         
 disp(' ')
