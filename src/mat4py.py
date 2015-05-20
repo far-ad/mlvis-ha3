@@ -1,5 +1,7 @@
 """mat4py - load and save data in the Matlab (TM) MAT-file format
 
+Downloaded from pypi: https://pypi.python.org/pypi/mat4py/0.1.0
+
 This module provides the following two functions for loading and saving
 data in Matlab (TM) MAT-file format:
 
